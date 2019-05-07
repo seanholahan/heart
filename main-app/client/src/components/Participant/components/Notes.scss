@@ -1,0 +1,48 @@
+@import "styles/_shared.scss";
+
+.citations-container {
+  grid-area: citation;
+}
+
+.citations-title {
+  @include section-title;
+}
+
+.citations-form-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+
+.citations-form {
+  box-shadow: $box-shadow;
+  background-color: white;
+  padding: 30px;
+
+  // form styling changes
+  .form-question {
+    color: $dark-grey;
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: capitalize;
+  }
+  .form-answer,
+  .form-input {
+    font-size: 18px;
+    color: $darker-grey;
+  }
+  .form-input {
+    // width: 150px;
+    @include heart-input-box;
+  }
+  .form-QA--row {
+    grid-gap: 20px;
+    background-color: $palest-grey;
+    padding: 15px 20px;
+    width: calc(100% + 20px);
+    margin-left: -30px;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
